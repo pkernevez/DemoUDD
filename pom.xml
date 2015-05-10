@@ -32,7 +32,20 @@
     <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
   </properties>
 
-
+  <distributionManagement>
+    <repository>
+      <id>cloudbeees.release</id>
+      <name>Our release repository</name>
+      <url>dav:https://repository-pkernevez.forge.cloudbees.com/release/</url>
+    </repository>
+    <snapshotRepository>
+      <id>cloudbees.snapshot</id>
+      <name>Our snapshot repository</name>
+      <url>dav:https://repository-pkernevez.forge.cloudbees.com/snapshot/</url>
+    </snapshotRepository>
+  </distributionManagement>
+  
+  
   <repositories>
     <repository>
       <id>CloudBeesJMonitoring</id>
@@ -53,6 +66,14 @@
   </dependencies>
   <build>
     <finalName>openjustitia</finalName>
+    <extensions>
+            <!-- Extension required to deploy a snapshot or a release to the CloudBees remote maven repository using Webdav -->
+            <extension>
+                <groupId>org.apache.maven.wagon</groupId>
+                <artifactId>wagon-webdav</artifactId>
+                <version>1.0-beta-2</version>
+            </extension>
+    </extensions>
     <plugins>
       <plugin>
         <groupId>org.apache.maven.plugins</groupId>
