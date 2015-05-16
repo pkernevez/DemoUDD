@@ -76,6 +76,36 @@
     </extensions>
     <plugins>
       <plugin>
+        <groupId>org.codehaus.cargo</groupId>
+        <artifactId>cargo-maven2-plugin</artifactId>
+        <configuration>
+          <container>
+            <containerId>tomcat7x</containerId>
+            <type>remote</type>
+          </container>
+          <type>runtime</type>
+          <properties>
+            <cargo.remote.username>username</cargo.remote.username>
+            <cargo.remote.password>password</cargo.remote.password>
+          </properties>
+          <deployables>
+            <deployable>
+              <pingURL>http://localhost:port/mycontext/index.html</pingURL>
+            </deployable>
+          </deployables>
+        </configuration>
+        <executions>
+          <execution>
+            <id>restart-container</id>
+            <phase>deploy</phase>
+            <goals>
+              <goal>stop</goal>
+              <goal>start</goal>
+            </goals>
+          </execution>
+        </executions>
+      </plugin>
+      <plugin>
         <groupId>org.apache.maven.plugins</groupId>
         <artifactId>maven-site-plugin</artifactId>
         <version>3.4</version>
