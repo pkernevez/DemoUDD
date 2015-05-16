@@ -1,10 +1,9 @@
-<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
-  xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/maven-v4_0_0.xsd">
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/maven-v4_0_0.xsd">
   <modelVersion>4.0.0</modelVersion>
   <groupId>ch.bger.demo</groupId>
   <artifactId>openjustitia</artifactId>
   <packaging>war</packaging>
-  <version>1.0-SNAPSHOT</version>
+  <version>1.0</version>
   <name>openjustitia Maven Webapp</name>
   <url>http://maven.apache.org</url>
 
@@ -17,6 +16,7 @@
     <url>https://github.com/pkernevez/DemoUDD</url>
     <connection>scm:git:git://github.com/pkernevez/DemoUDD.git</connection>
     <developerConnection>scm:git:git@github.com:pkernevez/DemoUDD.git</developerConnection>
+    <tag>openjustitia-1.0</tag>
   </scm>
 
   <developers>
