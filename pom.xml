@@ -12,6 +12,7 @@
     <system>GitHub Issues</system>
   </issueManagement>
 
+
   <scm>
     <url>https://github.com/pkernevez/DemoUDD</url>
     <connection>scm:git:git://github.com/pkernevez/DemoUDD.git</connection>
